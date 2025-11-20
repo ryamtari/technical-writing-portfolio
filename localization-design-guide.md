@@ -24,6 +24,7 @@ This guide provides specifications and implementation patterns for building UI c
 4. Communication Patterns
 5. Form Design Specifications
 6. Testing & QA Checklist
+7. Component Library
 
 ---
 

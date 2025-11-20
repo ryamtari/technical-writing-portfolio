@@ -143,18 +143,27 @@ Get all countries in a specific region.
 
 ### Response Fields
 Each country object contains the following key fields:
-| **Field**    | **Object** | **Description**                            |
-|--------------|------------|--------------------------------------------|
-| `name`       | Object     | Contains common and official country names |
-| `capital`    | Array      | List of capital cities                     |
-| `population` | Number     | Country population                         |
-| `region`     | String     | Geographic region                          |
-| `subregion`  | String     | Geographic subregion                       |
-| `languages`  | Object     | Languages spoken (code: name pairs)        |
-| `currencies` | Object     | Currencies used                            |
-| `flags`      | Object     | URLs to flag images (PNG and SVG)          |
-| `area`       | Number     | Country area in km²                        |
-| `timezones`  | Array      | List of timezones                          |
+| **Field**      | **Type** | **Description**                              | **Example**                                                      |
+|----------------|----------|----------------------------------------------|------------------------------------------------------------------|
+| `name`         | Object   | Contains common, official, and native names  | {"common": "Germany", "official": "Federal Republic of Germany"} |
+| `cca2`         | String   | ISO 3166-1 alpha-2 two-letter country code   | "DE"                                                             |
+| `cca3`         | String   | ISO 3166-1 alpha-3 three-letter country code | "DEU"                                                            |
+| `capital`      | Array    | List of capital cities                       | ["Berlin"]                                                       |
+| `region`       | String   | Geographic region                            | "Europe"                                                         |
+| `subregion`    | String   | Geographic subregion                         | "Western Europe"                                                 |
+| `languages`    | Object   | Languages spoken (code: name pairs)          | {"deu": "German"}                                                |
+| `currencies`   | Object   | Currencies used with name and symbol         | {"EUR": {"name": "Euro", "symbol": "€"}}                         |
+| `population`   | Number   | Country population                           | 83491249                                                         |
+| `area`         | Number   | Country area in km²                          | 357114                                                           |
+| `borders`      | Array    | Country codes of bordering countries         | ["AUT", "BEL", "CZE"]                                            |
+| `flags`        | Object   | URLs to flag images (PNG and SVG)            | {"png": "https://...", "svg": "https://..."}                     |
+| `timezones`    | Array    | List of timezones                            | ["UTC+01:00"]                                                    |
+| `maps`         | Object   | Links to map services                        | {"googleMaps": "https://..."}                                    |
+| `tld`          | Array    | Top-level domains                            | [".de"]                                                          |
+| `translations` | Object   | Country name in various languages            | {"spa": {"official": "...", "common": "..."}}                    |
+| `independent`  | Boolean  | Whether country is independent               | true                                                             |
+| `landlocked`   | Boolean  | Whether country is landlocked                | false                                                            |
+| `flag`         | String   | Unicode flag emoji                           | "🇩🇪"                                                             |
 
 ---
 
@@ -241,6 +250,26 @@ While no rate limits are currently imposed, developers are expected to use the A
 ---
 
 ### Troubleshooting
+**Common Issues and Solutions**  
+
+**Problem: Getting 404 "Not Found" Errors** 
+
+**Possible Causes:** 
+* Incorrect country name spelling
+* Using non-English country names
+* Country name variations
+
+**Solutions:**
+  1. Verify the country name spelling
+  2. Use the common English name (e.g., "South Korea" not "한국")
+  3. Try alternative names:
+     * "United States" or "USA" or "America"
+     * "United Kingdom" or "UK" or "Britain"
+  4. Use the country code endpoint if you know the ISO code
+
+**Example:**
+
+  
 
 ---
 

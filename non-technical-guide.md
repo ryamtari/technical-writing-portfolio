@@ -2,7 +2,7 @@
 ### A Non-Technical Guide to Building Fairer Recruitment Systems
 **Version:** 1.0  
 **Last Updated:** November 2025  
-**Reading Time:** 10 minutes  
+**Reading Time:** X minutes  
 **Audience:** Product Managers, HR teams, engineering managers, hiring tool developers
 
 ---

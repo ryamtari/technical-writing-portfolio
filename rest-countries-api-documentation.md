@@ -278,6 +278,13 @@ While no rate limits are currently imposed, developers are expected to use the A
 ---
 
 ### Best Practices
+1. **Cache API responses** to minimize repeated calls
+2. **Filter response fields** to reduce data transfer
+3. **Implement error handling** for reliable user experience  
+4. **Choose specific endpoints** over general searches
+5. **Add delays between rapid requests** to avoid overwhelming the API
+6. **Store common data locally** for instant access
+7. **Monitor API usage** to identify optimization opportunities
 
 ---
 

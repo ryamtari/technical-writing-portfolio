@@ -59,7 +59,19 @@ Search for countries by their common or official name.
 **Example Request:** `https://restcountries.com/v3.1/name/germany`  
 
 **Example Response:**
-
+```json
+[
+  {
+    "name": {
+      "common": "Germany",
+      "official": "Federal Republic of Germany"
+    },
+    "capital": ["Berlin"],
+    "population": 83240525,
+    "region": "Europe"
+  }
+]
+```
 
 **3. Search by Country Code**  
 Get a specific country using its ISO 3166-1 alpha-2 or alpha-3 code.
@@ -147,23 +159,81 @@ Each country object contains the following key fields:
 ---
 
 ### Filtering Responses
+This API requires field filtering for the `/all` endpoint. Use the `fields` query parameter to specify which data fields should be returned.
+
+**Example:** `https://restcountries.com/v3.1/all?fields=name,capital,population`
+
+This returns only the name, capital, and population fields.
 
 ---
 
 ### Code Examples
+**JavaScript (Fetch API)**
+```bash
+fetch('https://restcountries.com/v3.1/name/mexico')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+```
+
+**Python (requests)**
+```bash
+import requests
+
+response = requests.get('https://restcountries.com/v3.1/name/canada')
+data = response.json()
+print(data)
+```
+
+**cURL**
+```bash
+curl https://restcountries.com/v3.1/name/mexico
+```
 
 ---
 
 ### Error Responses
+**404 Not Found**  
+Returned when no countries match your search.
+
+**Example Response:**  
+```json
+{
+  "message": "Not Found",
+  "status": 404
+}
+```
+
+**400 Bad Request**  
+Returned when the request format is invalid.
 
 ---
 
 ### Rate Limits
+While no rate limits are currently imposed, developers are expected to use the API responsibly. Best practice is to avoid excessive requests and implement caching where possible.
 
 ---
 
 ### Use Cases
+**Travel & Hospitality**
+* Destination research and trip planning applications
+* Hotel booking platforms showing local information
+* Currency conversion tools with country data
+  
+**Data Visualization & Analytics**
+* Interactive maps and demographic charts
+* Economic indicators and population trends
+* International business intelligence dashboards
+  
+**Form Management & UX**
+* Country selection dropdowns in registration forms
+* Address auto-completion and validation
+* Localized content based on user's country
 
+**Business Applications**
+* E-commerce platforms for international shipping
+* Multi-language website localization
+* Market research and regional analysis
 ---
 
 ### Storing Country Data in a Database
@@ -183,11 +253,27 @@ Each country object contains the following key fields:
 ---
 
 ### Support and Resources
+* **Official Website**: [restcountries.com](https://restcountries.com)
+* **GitHub Repository**: [apilayer/restcountries](https://github.com/apilayer/restcountries)
+* **Issue Tracking**: [Report issues](https://github.com/apilayer/restcountries/issues) via GitHub Issues
+* **API Status**: Monitor GitHub for service updates and downtime notifications
 
 ---
 
 ### Frequently Asked Questions
+**Q: Is authentication required?**  
+A: No, the API is completely open and requires no authentication.
+
+**Q: Can I use this in production?**  
+A: Yes, the API is free for commercial and non-commercial use.
+
+**Q: How often is the data updated?**  
+A: The data is updated periodically as country information changes.
+
+**Q: What format does the API return?**  
+A: All responses are in JSON format.  
 
 ---
 
 ### Version History
+**v1.0** (Current)

@@ -100,3 +100,94 @@ Find countries where a specific language is spoken.
 `https://restcountries.com/v3.1/lang/spa`  
 
 **Response:** Returns an array of countries speaking that language.
+
+**6. Search by Capital City**  
+Find a country by its capital city.
+
+**Endpoint:** `GET /capital/{capital}`  
+
+**Parameters:** 
+* `{capital}` (required) - Capital city name
+
+**Example Request:**  
+`https://restcountries.com/v3.1/capital/paris`  
+
+**Response:** Returns an array of countries (usually one) with that capital.
+
+**7. Search by Region**  
+Get all countries in a specific region.
+
+**Endpoint:** `GET /region/{region}`  
+
+**Parameters:** 
+* `{region}` (required) - One of: Africa, Americas, Asia, Europe, Oceania
+
+**Example Request:**  
+`https://restcountries.com/v3.1/region/europe`  
+
+**Response:** Returns an array of countries in that region.
+
+--- 
+
+### Response Fields
+Each country object contains the following key fields:
+| **Field**    | **Object** | **Description**                            |
+|--------------|------------|--------------------------------------------|
+| `name`       | Object     | Contains common and official country names |
+| `capital`    | Array      | List of capital cities                     |
+| `population` | Number     | Country population                         |
+| `region`     | String     | Geographic region                          |
+| `subregion`  | String     | Geographic subregion                       |
+| `languages`  | Object     | Languages spoken (code: name pairs)        |
+| `currencies` | Object     | Currencies used                            |
+| `flags`      | Object     | URLs to flag images (PNG and SVG)          |
+| `area`       | Number     | Country area in km²                        |
+| `timezones`  | Array      | List of timezones                          |
+
+---
+
+### Filtering Responses
+
+---
+
+### Code Examples
+
+---
+
+### Error Responses
+
+---
+
+### Rate Limits
+
+---
+
+### Use Cases
+
+---
+
+### Storing Country Data in a Database
+
+---
+
+### Troubleshooting
+
+---
+
+### Performance Considerations
+
+---
+
+### Best Practices
+
+---
+
+### Support and Resources
+
+---
+
+### Frequently Asked Questions
+
+---
+
+### Version History

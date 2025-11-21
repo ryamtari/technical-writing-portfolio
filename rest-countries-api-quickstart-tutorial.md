@@ -151,11 +151,18 @@ If the country isn't found, this displays a friendly error message.
 ---
 
 ### Next Steps
-Now that you've built your first application with the REST Countries API, try:
-1. 
-2.
-3.
+Now that you've built your first application with the REST Countries API, here are some ideas to enhance it:
+1. **Improve styling:** Add color, different fonts, or a background image
+2. **Add more features:** Display neighboring countries or timezone information
+3. **Filter by region:** Create buttons to show all countries in Europe, Asia, etc.
+4. **Save favorites:** Let users bookmark countries they're interested in
 
 ---
 
 ### What You Learned
+* How to make API requests using JavaScript
+* How to handle API responses
+* How to display data dynamically on a webpage
+* How to Handle Errors Properly
+
+Congratulations! You've successfully integrated the REST Countries API into a working application.

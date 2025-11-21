@@ -97,3 +97,65 @@ Create a new file called `country-finder.html` and add this code:
 </body>
 </html>
 ```
+
+---
+
+### Step 2: Test Your App
+1. **Save the file** as `country-finder.html`
+2. **Open it** in your web browser (double-click the file)
+3. **Type a country name** (try "Japan" or "Brazil")
+4. **Click Search**
+
+You should see the country's information appear.
+
+---
+
+### Step 3: How It Works
+Let's break down the important parts:  
+
+**The API Request**
+```bash
+fetch(`https://restcountries.com/v3.1/name/${countryName}`)
+```
+This line sends a request to the REST Countries API with the country name you typed.  
+
+**Processing the Response**
+```bash
+.then(response => response.json())
+.then(data => {
+    const country = data[0];
+    // Display the data
+})
+```
+This converts the API response to JSON format and extracts the first country from the results.  
+**Error Handling**
+```bash
+.catch(error => {
+    // Show error message
+})
+```
+If the country isn't found, this displays a friendly error message.
+
+---
+
+### Troubleshooting
+**Problem:** Nothing happens when I click Search.
+**Solution:** Check the browser console (F12) for error messages. Make sure you're connected to the internet.
+
+**Problem:** I see "Country not found" for valid countries.
+**Solution:** Try using the country's common English name or name variations (e.g. "Islamic Republic of Iran" instead of "Iran").
+
+**Problem:** The page looks broken.
+**Solution:** Make sure you copied all the code and correctly saved the file with a `.html` extension. Also ensure all the HTML tags are properly closed.
+
+---
+
+### Next Steps
+Now that you've built your first application with the REST Countries API, try:
+1. 
+2.
+3.
+
+---
+
+### What You Learned

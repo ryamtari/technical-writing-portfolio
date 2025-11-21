@@ -262,9 +262,7 @@ While no rate limits are currently imposed, developers are expected to use the A
 **Solutions:**
   1. Verify the country name spelling
   2. Use the common English name (e.g., "South Korea" not "한국")
-  3. Try alternative names:
-     * "United States" or "USA" or "America"
-     * "United Kingdom" or "UK" or "Britain"
+  3. Try alternative names: "United States" or "USA" or "America"
   4. Use the country code endpoint if you know the ISO code
 
 **Example:**

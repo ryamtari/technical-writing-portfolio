@@ -245,10 +245,6 @@ While no rate limits are currently imposed, developers are expected to use the A
 * Market research and regional analysis
 ---
 
-### Storing Country Data in a Database
-
----
-
 ### Troubleshooting
 **Common Issues and Solutions**  
 
@@ -266,6 +262,21 @@ While no rate limits are currently imposed, developers are expected to use the A
   4. Use the country code endpoint if you know the ISO code
 
 **Example:**
+
+**Problem: Response Takes Too Long** 
+
+**Possible Causes:**
+* Fetching all countries (/all endpoint)
+* Not filtering fields
+* Network latency
+* Large response size
+
+**Solutions:**
+1. Use specific endpoints instead of `/all`
+2. Filter fields to return only what you need:
+   `/all?fields=name,capital,population`
+4. Implement caching (see Performance Considerations)
+5. Use pagination if processing many countries
 
   
 

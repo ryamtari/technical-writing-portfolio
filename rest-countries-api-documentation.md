@@ -343,6 +343,45 @@ const languages = Object.values(country.languages).join(", ");
 ---
 
 ### Performance Considerations
+Understanding how to optimize your application's speed and efficiency when using the REST Countries API.
+
+**Caching Strategies**  
+
+
+Country data is well suited for caching because it changes infrequently. Details such as capital cities, population figures, and national flags typically remain stable over long periods.
+
+**Types of caching:**
+* In-memory caching
+* Browser storage
+* Server-side caching
+
+**Recommended cache duration:**
+* All countries list: 7 days (data rarely changes)
+* Individual country data: 24-48 hours
+* Flag images: 30 days (almost never change)
+
+**When to refresh cache:**  
+Set a expiration time on your cached data. When data is older than this time, fetch fresh data from the API and update your cache.
+
+**Query Optimization**
+
+**What is query optimization?**  
+
+**Use Specific Endpoints**
+
+**The principle:**  
+Always use the most specific endpoint available for your needs. Don't fetch 250 countries when you only need 50 European ones.
+
+**Endpoint selection guide:**
+| **Your Goal**                      | **Best Endpoint**                    | **Why It's Better**                         |
+|------------------------------------|--------------------------------------|---------------------------------------------|
+| Find one specific country          | `/name/{country}` or `/alpha/{code}` | Returns only the country you need           |
+| Get countries in a region          | `/region/{region}`                   | Filters server-side, reducing data transfer |
+| Find countries using a currency    | `/currency/{code}`                   | Pre-filtered by the API                     |
+| Find countries speaking a language | `/lang/{language}`                   | Returns only relevant matches               |
+
+**Avoid:**  
+Fetching all countries with `/all` and then filtering on your end. This downloads unnecessary data and slows your application.
 
 ---
 

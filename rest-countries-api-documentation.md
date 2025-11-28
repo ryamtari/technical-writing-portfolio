@@ -274,11 +274,71 @@ While no rate limits are currently imposed, developers are expected to use the A
 **Solutions:**
 1. Use specific endpoints instead of `/all`
 2. Filter fields to return only what you need:
-   `/all?fields=name,capital,population`
+   
+```bash
+/all?fields=name,capital,population
+```
 4. Implement caching (see Performance Considerations)
 5. Use pagination if processing many countries
 
-  
+**Problem: Missing or Undefined Data Fields**
+
+**Possible Causes:**
+* Not all countries have fields
+* Some countries have no capital or multiple capitals
+* Field names changed in API version
+
+**Solutions:**
+1. Always check if fields exist before accessing:
+```bash
+const capital = country.capital ? country.capital[0] : "N/A";
+```
+2. Use optional chaining in JavaScript:
+```bash
+const currency = country.currencies?.USD?.name ?? "Unknown";
+```
+3. Provide fallback values for missing data
+
+**Problem: CORS Error in Browser**
+
+**Error Message:** 
+```bash
+Access to fetch has been blocked by CORS policy
+```
+**Cause:** Your web application is being blocked by browser security
+
+**Solutions:**
+1. This API supports CORS, so check your request syntax
+2. Ensure you're using HTTPS, not HTTP
+3. Test in a different browser to rule out extensions
+4. If developing locally, use a local server instead of opening HTML files directly
+
+**Problem: Rate Limiting or Blocked Requests**
+
+**Possible Causes:**
+* Too many requests in a short amount of time
+* Using `/all` endpoint repeatedly
+* Bot-like behavior patterns
+
+**Solutions:**
+1. Implement caching to reduce requests
+2. Add delays between requests
+3. Use specific endpoints instead of `/all`
+4. Consider storing data locally
+
+**Problem: Inconsistent Language or Currency Data**
+
+**Cause:** Countries may have multiple languages or currrencies
+
+**Solutions:** 
+1. Languages and currencies are returned as objects, not arrays
+2. Extract all values if you need them:
+```bash
+const languages = Object.values(country.languages).join(", ");
+   const currencies = Object.values(country.currencies)
+     .map(c => c.name)
+     .join(", ");
+```
 
 ---
 

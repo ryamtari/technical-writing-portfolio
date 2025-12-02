@@ -113,7 +113,7 @@ Quick reference guide covering 150+ localization rules for content formatting, c
 ---
 
 ## [5]. Understanding Bias in AI Hiring Systems
-__[View Full Documentation](./ai-bias-guide.md)__
+**[View Full Documentation](./ai-bias-guide.md)**
 
 Non-technical guide explaining algorithmic bias in automated hiring systems, featuring real-world case studies (Amazon, HireVue), root cause analysis, and a practical implementation framework for building fairer AI recruitment tools.
 
@@ -138,6 +138,13 @@ Non-technical guide explaining algorithmic bias in automated hiring systems, fea
 * Audience analysis and adaptation (wrote for product teams, not engineers)
 * Documentation of emerging technology and compliance requirements (NYC Local Law 144, EU AI Act)
 * Strategic content organization with real-world examples and business impact analysis
+
+---
+
+## [6]. Git Command Line Documentation for Windows
+**[View Guide](./git-cli-docs-guide.md)**
+
+Working on a comprehensive guide to Git version control for Windows users, covering installation, essential commands, branching workflows, and common issues. 
   
 ---
 

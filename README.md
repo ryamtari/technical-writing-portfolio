@@ -64,7 +64,7 @@ Comprehensive component specification guide for building culturally adaptive UI 
 
 **Documentation Type:** Design System Documentation  
 **Audience:** Product designers, frontend developers, UX researchers  
-**Length:** ~3,500 words
+**Length:** ~2,100 words
 
 **Key Sections:**
 * User journey mapping for global audiences
@@ -91,7 +91,7 @@ Quick reference guide covering 150+ localization rules for content formatting, c
 
 **Documentation Type:** Style Guide / Reference Documentation  
 **Audience:** Content writers, translators, QA testers, product managers  
-**Length:** ~2,800 words
+**Length:** ~4,500 words
 
 **Key Sections:**
 * Number and currency formatting standards
@@ -112,6 +112,35 @@ Quick reference guide covering 150+ localization rules for content formatting, c
 
 ---
 
+## [5]. Understanding Bias in AI Hiring Systems
+__[View Full Documentation](./ai-bias-guide.md)__
+
+Non-technical guide explaining algorithmic bias in automated hiring systems, featuring real-world case studies (Amazon, HireVue), root cause analysis, and a practical implementation framework for building fairer AI recruitment tools.
+
+**Documentation Type:** Implementation Guide / Non-Technical Explainer  
+**Audience:** Product managers, HR teams, engineering managers, technical writers  
+**Length:** ~3,800 words
+
+**Key Sections:**
+* Plain-language explanation of AI bias (using analogies and visual examples)
+* Three types of bias: race/gender, institutional, and algorithmic
+* Detailed case studies: Amazon's resume screening tool and HireVue's video interview system
+* Root causes: data bias, proxy variables, transparency issues
+* Solutions framework: IBM AI Fairness 360, Microsoft Fairlearn, fairness-aware algorithms
+* Action plan: auditing checklist, monitoring dashboard templates, vendor evaluation
+* Ready-to-use templates: candidate communications, bias incident reports, compliance checklists
+
+**Skills Demonstrated:**
+* Translating complex technical concepts for non-technical audiences
+* Research synthesis from academic papers into actionable guidance
+* Creating practical templates and checklists for immediate implementation
+* Information architecture (progressive disclosure, scannable formatting)
+* Audience analysis and adaptation (wrote for product teams, not engineers)
+* Documentation of emerging technology and compliance requirements (NYC Local Law 144, EU AI Act)
+* Strategic content organization with real-world examples and business impact analysis
+  
+---
+
 ## 🛠️ Technical Skills
 
 **Documentation Types:**
@@ -119,6 +148,9 @@ Quick reference guide covering 150+ localization rules for content formatting, c
 - Quickstart Guides & Tutorials
 - Troubleshooting Guides
 - Performance Optimization Documentation
+- Design System Guide
+- Style Guide
+- Implementation Guide
 
 **Tools & Technologies:**
 - Markdown

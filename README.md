@@ -9,7 +9,7 @@
 ## 📄 Documentation Samples
 
 ### 1. REST Countries API Reference Documentation
-**[View Full Documentation](rest-countries-api-docs.md)**
+**[View Full Documentation](rest-countries-api-documentation.md)**
 
 Comprehensive API reference documentation for the REST Countries API, covering endpoints, request/response formats, error handling, and performance optimization.
 
@@ -35,7 +35,7 @@ Comprehensive API reference documentation for the REST Countries API, covering e
 ---
 
 ### 2. REST Countries API Quickstart Tutorial
-**[View Tutorial](quickstart-tutorial.md)**
+**[View Tutorial](rest-countries-api-quickstart-tutorial.md)**
 
 Step-by-step tutorial that guides beginners through building their first application using the REST Countries API in under 10 minutes.
 
@@ -56,6 +56,59 @@ Step-by-step tutorial that guides beginners through building their first applica
 - Clear step-by-step instructions
 - Beginner-friendly explanations
 - Educational content design
+
+## 3. Localization Design System Guide
+**[View Full Guide](localization-design-system-guide.md)**
+
+Comprehensive component specification guide for building culturally adaptive UI experiences across US and Chinese markets, including user journey mapping and implementation guidelines.
+
+**Documentation Type:** Design System Documentation  
+**Audience:** Product designers, frontend developers, UX researchers  
+**Length:** ~3,500 words
+
+**Key Sections:**
+* User journey mapping for global audiences
+* Component specifications (forms, navigation, search, payment)
+* Cultural adaptation patterns
+* Implementation guidelines for 15+ UI components
+* Testing and validation framework
+* Cross-market consistency guidelines
+
+**Skills Demonstrated:**
+* Content ecosystem analysis
+* User journey mapping
+* Component documentation
+* Cross-functional communication (design + engineering)
+* Information architecture
+* Technical writing for product teams
+
+---
+
+## 4. Localization Style Guide: US vs China
+**[View Full Guide](localization-style-guide.md)**
+
+Quick reference guide covering 150+ localization rules for content formatting, cultural standards, and market-specific conventions organized for rapid lookup during content creation and review.
+
+**Documentation Type:** Style Guide / Reference Documentation  
+**Audience:** Content writers, translators, QA testers, product managers  
+**Length:** ~2,800 words
+
+**Key Sections:**
+* Number and currency formatting standards
+* Date, time, and address conventions
+* Name and title formatting rules
+* Color symbolism and cultural meanings
+* Communication style guidelines
+* Platform-specific requirements (WeChat, Alipay)
+* 40+ comparison tables for quick reference
+
+**Skills Demonstrated:**
+* Content organization and information architecture
+* Attention to detail and accuracy
+* Cross-cultural research and analysis
+* Reference documentation design
+* Workflow-optimized formatting
+* Strategic content alignment
 
 ---
 

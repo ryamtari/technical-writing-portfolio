@@ -347,7 +347,6 @@ Understanding how to optimize your application's speed and efficiency when using
 
 **Caching Strategies**  
 
-
 Country data is well suited for caching because it changes infrequently. Details such as capital cities, population figures, and national flags typically remain stable over long periods.
 
 **Types of caching:**
@@ -360,17 +359,17 @@ Country data is well suited for caching because it changes infrequently. Details
 * Individual country data: 24-48 hours
 * Flag images: 30 days (almost never change)
 
-**When to refresh cache:**  
-Set a expiration time on your cached data. When data is older than this time, fetch fresh data from the API and update your cache.
+**When to refresh cache:** Set a expiration time on your cached data. When data is older than this time, fetch fresh data from the API and update your cache.
+
+---
 
 **Query Optimization**
 
-**What is query optimization?**  
+Query optimization is the process of selecting the most efficient method to retrieve exactly the data you need, without extra information.
 
 **Use Specific Endpoints**
 
-**The principle:**  
-Always use the most specific endpoint available for your needs. Don't fetch 250 countries when you only need 50 European ones.
+**The principle:** Always use the most specific endpoint available for your needs. For example, instead of fetching 250 countries and filtering for the 50 European ones you require, request data directly from a dedicated European countries endpoint.
 
 **Endpoint selection guide:**
 | **Your Goal**                      | **Best Endpoint**                    | **Why It's Better**                         |
@@ -380,8 +379,130 @@ Always use the most specific endpoint available for your needs. Don't fetch 250 
 | Find countries using a currency    | `/currency/{code}`                   | Pre-filtered by the API                     |
 | Find countries speaking a language | `/lang/{language}`                   | Returns only relevant matches               |
 
-**Avoid:**  
-Fetching all countries with `/all` and then filtering on your end. This downloads unnecessary data and slows your application.
+**Avoid:** Fetching all countries with `/all` and then filtering on your end. This downloads unnecessary data and slows your application.
+
+---
+
+**Field Filtering**
+
+**The Principle:** Only request the data fields you actually need. For example. if you only require country names and flag images, do not request additional fields such as population, area, languages, or other attributes.
+
+**How it works:** Use the `fields` query parameter to specify exactly which fields you want returned. The API will send only those fields, response size by up to 80%.
+
+**Example Use Cases:**
+* **For a dropdown menu:** Fetch only the `name` field.
+* **For a summary card:** Fetch only `name`, `capital`, `population`, and `flag`.
+* **For a search:** Fetch `name` and relevant searchable fields.
+* **For a full profile:** Fetch all necessary display fields.
+
+**Remember:** The `all` endpoint requires the `fields` parameter. Without it, you'll receive a 400 error.
+
+---
+
+**Bandwith Considerations**  
+Bandwidth is the amount of data transferred over a network. Minimizing data transfer is critical for faster loading times and a better user experience, especially on mobile devices or slow connections.
+
+**Response Size Comparison**  
+Different API requests transfer significantly different amounts of data. Choose the most efficient request for your use case.
+
+| **Request Type**           | **Approximate Size** | **Best Used For**                    |
+|----------------------------|----------------------|--------------------------------------|
+| Single country, all fields | ~5 KB                | Detailed country profile pages       |
+| Single country, 3-5 fields | ~1 KB                | List items, search results           |
+| All countries, 3-5 fields  | ~200 KB              | Dropdown menus, complete directories |
+| One region, minimal fields | ~30-50 KB            | Regional browsing interfaces         |
+
+**Impact of optimization:** Applying field filtering can reduce response sizes by 60–80%, significantly accelerating your application.
+
+**Best Practices by Application Type**
+
+**Mobile Applications**
+* Fetch only essential fields on the initial load.
+* Load detailed data on-demand (e.g., when a user selects a country).
+* Implement client-side caching to avoid redundant requests.
+* Schedule large dataset downloads for WiFi connections.
+
+**Web Applications**
+* Apply field filtering for list, grid, and search views.
+* Request complete data only for individual detail pages.
+* Implement lazy loading or pagination for long lists.
+* Cache static assets and frequently accessed data.
+
+**Offline-First Applications**
+* Pre-download full datasets over WiFi.
+* Store data locally for offline access.
+* Implement periodic background syncs for updates.
+* Clearly indicate when data is stale or being refreshed.
+
+---
+
+**Strategic Querying**
+
+**Choose Specific Endpoints for Targeted Needs**  
+Use precise endpoints like `/name/{country}` or `/alpha/{code}` when:
+* You know exactly what you are looking for.
+* Real-time accuracy is critical.
+* Minimizing bandwidth is a priority.
+* Responding directly to a user’s search.
+
+**Choose Broad Endpoints for Batch Operations**  
+Use wider endpoints like `/all` or `/region/{region}` when:
+* You need data for multiple countries at once.
+* Populating selection menus, dropdowns, or directories.
+* Implementing client-side search or filtering.
+* You can cache the result set for reuse.
+
+**The Principle: Minimize Sequential Requests**  
+Instead of making multiple API calls in a loop, fetch a broader, relevant dataset once. Then, filter and use the data locally. This reduces network overhead and improves performance.
+
+---
+
+**Performance Monitoring**  
+Tracking key metrics helps you identify bottlenecks, validate the effectiveness of your optimizations, and ensure your application scales efficiently.
+
+**Key Metrics to Track**
+
+**Response Time**
+* **Target:** <500ms for single countries; <1000ms for regions.
+* **Purpose:** Measures network and API latency. Indicates overall system health.
+
+**Cache Hit Rate**
+* **Target:** 80% or higher.
+* **Purpose:** Measures how often requests are served from cache versus the API. A high rate validates your caching strategy.
+
+**Error Rate**
+* **Target:** <1% of total requests.
+* **Purpose:** Tracks failures (404s, timeouts, network errors). Helps identify reliability issues.
+
+**Bandwidth Usage**
+* **Target:** Monitor trends over time.
+* **Purpose:** Quantifies total data transferred. Highlights opportunities for further optimization, crucial at scale.
+
+---
+
+**Common Performance Mistakes** 
+
+**Fetching Inside Loops:** Making separate API calls for each item in a loop multiplies network overhead and slows your application. Instead, fetch the required dataset once (using a broader endpoint if necessary) and iterate through the local result.
+
+**Over-Fetching Data:** Requesting all available fields when you only need a few wastes bandwidth and increases latency. Always use the `fields` parameter to retrieve only the data you will use.
+
+**Ignoring Error Handling:** Network requests can and will fail. Applications without proper error handling (e.g., try/catch blocks, user-friendly fallback messages) will crash or hang, providing a poor user experience.
+
+**Skipping Loading States:** Users need visual feedback. Always implement loading indicators (spinners, skeleton screens) during data fetches so users know the application is responding.
+
+**Neglecting Cache Invalidation:** Cached data becomes stale. Without an expiration or refresh strategy, users may see outdated information. Implement time-based expiration or manual refresh triggers.
+
+---
+
+**Performance Optimization Checklist**  
+Before deploying your application, confirm you have implemented:    
+✅ **Caching** for static or infrequently changed data.  
+✅ **Field filtering** on all requests to minimize response size.  
+✅ **Specific endpoints** instead of fetching /all and filtering client-side.  
+✅ **Error handling** for all network requests and API calls.  
+✅ **Loading states** to provide user feedback during data fetching.  
+✅ **Cache expiration** to ensure data does not become stale.  
+✅ **Performance monitoring** to track key metrics and identify bottlenecks.  
 
 ---
 

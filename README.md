@@ -141,7 +141,7 @@ Non-technical guide explaining algorithmic bias in automated hiring systems, fea
 
 ---
 
-## [6]. Git Command Line Documentation for Windows
+## [6]. Git Command Line Documentation for Windows (In Progress)
 **[View Guide](./git-cli-docs-guide.md)**
 
 Working on a comprehensive guide to Git version control for Windows users, covering installation, essential commands, branching workflows, and common issues. 

@@ -15,7 +15,7 @@ Comprehensive API reference documentation for the REST Countries API, covering e
 
 **Documentation Type:** API Reference  
 **Audience:** Developers (beginner to intermediate)  
-**Length:** ~4,000 words
+**Length:** ~2,400 words
 
 **Key Sections:**
 - Getting Started & Overview
@@ -41,7 +41,7 @@ Step-by-step tutorial that guides beginners through building their first applica
 
 **Documentation Type:** Tutorial / How-To Guide  
 **Audience:** Beginner developers  
-**Length:** ~1,500 words
+**Length:** ~600 words
 
 **Key Sections:**
 - Prerequisites and setup

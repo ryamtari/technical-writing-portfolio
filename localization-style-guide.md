@@ -1393,10 +1393,6 @@ Step 6: Launch & Monitor
 - [Microsoft US Style Guide](https://docs.microsoft.com/style-guide)
 - [Google Developer Style Guide](https://developers.google.com/style)
 
-**China Localization:**
-- [China Internet Watch](https://www.chinainternetwatch.com/) - Digital trends
-- [Chinese Government Standards](http://www.gb688.cn/bzgk/gb/) - Official formats
-
 **General Localization:**
 - [W3C Internationalization](https://www.w3.org/International/) - Best practices
 - [Unicode CLDR](http://cldr.unicode.org/) - Locale data standards
@@ -1441,8 +1437,6 @@ A: Review quarterly for accuracy. Update immediately for:
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | Nov 2025 | Initial release |
-| Coming | Dec 2025 | Add Southeast Asia markets |
-| Coming | Q1 2026 | Add European markets |
 
 ---
 
@@ -1461,4 +1455,4 @@ A: Review quarterly for accuracy. Update immediately for:
 
 **Remember:** Localization is not just translation. It's adapting your entire product experience to respect and resonate with local users. When in doubt, consult with native speakers and cultural experts from your target market.
 
-**🌏 Good luck with your localization efforts! 加油！(Jiā yóu! = Keep going!)**
+**Good luck with your localization efforts!**

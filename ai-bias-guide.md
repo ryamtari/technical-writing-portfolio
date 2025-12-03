@@ -14,7 +14,7 @@ If your company uses AI to screen resumes, rank candidates, or conduct video int
 **The numbers:**
 - **23.7%** of hiring discrimination stems from race
 - **21.2%** stems from gender
-- AI can process 1,000+ resumes in the time it takes a human to read one
+- AI can process **1,000+** resumes in the time it takes a human to read one
 
 When AI learns from biased historical data, it doesn't just replicate that bias—it amplifies it at massive scale.
 
@@ -24,7 +24,7 @@ When AI learns from biased historical data, it doesn't just replicate that bias�
 
 ### The Apple Analogy
 
-Imagine teaching a child to identify "good apples" by only showing them red apples. When they see a green apple later, they reject it—not because it's bad, but because it doesn't match what they learned.
+Imagine teaching a child to identify "good apples" by only showing them red apples. When they see a green apple later, they reject it. It's not because the green apple is bad, but because it doesn't match what they learned.
 
 **This is exactly how AI bias works.**
 
@@ -36,7 +36,7 @@ Biased Historical Data → AI Training → Biased Decisions at Scale
 
 AI systems learn from examples we give them. If those examples contain unfair patterns from the past, the AI learns to repeat those patterns automatically.
 
-**The critical insight:** AI isn't naturally fair or unfair—it learns fairness (or unfairness) from the data we give it.
+**The critical insight:** AI isn't naturally fair or unfair. It learns fairness (or unfairness) from the data we give it.
 
 ### Key Terms Made Simple
 
@@ -58,10 +58,10 @@ AI systems learn from examples we give them. If those examples contain unfair pa
 **By the numbers:** Race accounts for 23.7% and gender for 21.2% of hiring discrimination.
 
 **The problem:** Simply removing "gender" or "race" from your data doesn't work. AI learns bias through proxy variables:
-- 📍 Zip codes (correlate with race and income)
-- 🎓 University names (correlate with socioeconomic status)
-- ⏸️ Career gaps (penalize caregivers, mostly women)
-- 🏢 Previous companies (favor privileged networks)
+- Zip codes (correlate with race and income)
+- University names (correlate with socioeconomic status)
+- Career gaps (penalize caregivers, mostly women)
+- Previous companies (favor privileged networks)
 
 **Key insight:** Gender and race are intersecting systems of power, not just fixed variables you can delete.
 
@@ -94,9 +94,9 @@ AI systems learn from examples we give them. If those examples contain unfair pa
 
 ---
 
-## Real-World Examples That Changed Everything
+## Real-World Examples 
 
-### Case Study #1: Amazon's Resume Robot (2018)
+### Case Study #1: Amazon's Resume Bias (2018)
 
 #### The Goal
 Automate resume screening to handle thousands of applications efficiently.
@@ -128,7 +128,7 @@ The AI automatically **penalized any resume containing the word "women":**
 **Amazon scrapped the entire tool in 2018.** Engineers couldn't fix it because the bias was embedded in the training data itself.
 
 #### The Lesson
-> You can't fix a data problem with an algorithm solution. Biased training data = biased AI, regardless of how sophisticated your algorithm is.
+> You can't fix a data problem with an algorithm solution. Biased training data leads to biased outcomes, regardless of how sophisticated the algorithm is.
 
 ---
 
@@ -167,9 +167,9 @@ AI analyzes:
 **Problem 3: Intersectional Blindness**
 
 The 4/5ths rule tested:
-- ✓ White men vs. White women
-- ✓ White men vs. Black men
-- ✗ **MISSED:** Black women (who face combined racial + gender bias)
+- ✅ White men vs. White women
+- ✅ White men vs. Black men
+- ❌ **MISSED:** Black women (who face combined racial + gender bias)
 
 **Problem 4: Black Box Problem**
 - Candidates didn't know what AI evaluated
@@ -193,11 +193,11 @@ The 4/5ths rule tested:
 
 | Risk | Real Impact |
 |------|------------|
-| **💰 Legal Liability** | Discrimination lawsuits cost millions; EEOC investigations result in multi-million dollar settlements |
-| **🎯 Talent Loss** | Amazon's AI rejected qualified women for years before discovery |
-| **📉 Reputation Damage** | HireVue faced regulatory scrutiny and had to overhaul their entire system |
-| **🚫 Lower Innovation** | McKinsey: Diverse teams are 35% more likely to outperform competitors |
-| **⚖️ Regulatory Risk** | NYC Local Law 144, EU AI Act, Illinois AI Video Interview Act now require compliance |
+| **Legal Liability** | Discrimination lawsuits cost millions; EEOC investigations result in multi-million dollar settlements |
+| **Talent Loss** | Amazon's AI rejected qualified women for years before discovery |
+| **Reputation Damage** | HireVue faced regulatory scrutiny and had to overhaul their entire system |
+| **Lower Innovation** | McKinsey: Diverse teams are 35% more likely to outperform competitors |
+| **Regulatory Risk** | NYC Local Law 144, EU AI Act, Illinois AI Video Interview Act now require compliance |
 
 ### The Compliance Landscape
 
@@ -401,7 +401,7 @@ YOUR RIGHTS:
 ✓ Appeal any decision
 ✓ Provide additional context AI may have missed
 
-Questions? Contact us at [email]
+Questions? Contact us at [email].
 
 Best regards,
 [Hiring Team]
@@ -431,7 +431,7 @@ Best regards,
 11. Can we customize which features the AI uses?
 12. Can we disable risky features?
 
-**🚨 Red Flags:**
+**Red Flags:**
 - Claims system is "completely unbiased" (impossible)
 - Can't show recent audit results
 - No independent third-party audits
@@ -500,7 +500,6 @@ To build fair AI hiring systems, you need **all three:**
 
 ### Learn More
 - Contact: ryamtari@gmail.com
-
 ---
 
 ## About This Guide

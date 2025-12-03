@@ -36,13 +36,13 @@ This guide provides specifications and implementation patterns for building UI c
 
 ## Table of Contents
 
-1. [When to Use This Guide](#when-to-use)
-2. [Trust & Credibility Components](#trust-components)
-3. [User Onboarding Flows](#onboarding-flows)
-4. [Communication Patterns](#communication-patterns)
-5. [Form Design Specifications](#form-design)
-6. [Testing & QA Checklist](#testing)
-7. [Component Library](#component-library)
+1. [When to Use This Guide]
+2. [Trust & Credibility Components]
+3. [User Onboarding Flows]
+4. [Communication Patterns]
+5. [Form Design Specifications]
+6. [Testing & QA Checklist]
+7. [Component Library]
 
 ---
 
@@ -102,13 +102,13 @@ Purpose: Display third-party certifications and security credentials
 | Type | Icon | Main Text | Supporting Text |
 |------|------|-----------|----------------|
 | `security` | Shield icon (🛡️) | "256-bit SSL Encryption" | "Bank-level security" |
-| `certified` | Checkmark icon (✓) | "ISO 27001 Certified" | "Third-party verified" |
+| `certified` | Checkmark icon (✅) | "ISO 27001 Certified" | "Third-party verified" |
 | `privacy` | Lock icon (🔒) | "GDPR Compliant" | "Your data is protected" |
 
 **Visual Appearance:**
 ```
 ┌──────────────────────────────────────┐
-│  🛡️  256-bit SSL Encryption         │
+│  🛡️  256-bit SSL Encryption          │
 │      Bank-level security             │
 └──────────────────────────────────────┘
 
@@ -152,7 +152,7 @@ Note: Metrics are dynamic (passed as variables)
 **Visual Appearance:**
 ```
 ┌──────────────────────────────────────┐
-│  👥  活跃用户                         │
+│  👥  活跃用户                        │
 │      500万+ 用户信赖                  │
 └──────────────────────────────────────┘
 
@@ -244,13 +244,13 @@ User lands in product → Optional profile completion later
 ```
 Step 1: Welcome & Introduction
 ┌──────────────────────────────────┐
-│ 欢迎使用 [Product Name]          │
+│ 欢迎使用 [Product Name]           │
 │ Welcome to [Product Name]        │
 │                                  │
 │ [Brief platform introduction]    │
 │ [Company history/credentials]    │
 │                                  │
-│ [开始了解 / Start Exploring]     │
+│ [开始了解 / Start Exploring]      │
 └──────────────────────────────────┘
 
 Step 2: Account Type Selection
@@ -258,8 +258,8 @@ Step 2: Account Type Selection
 │ 请选择注册方式                    │
 │ Please select registration type  │
 │                                  │
-│ [ ] 手机号注册 (Phone)           │
-│ [ ] 微信登录 (WeChat)            │
+│ [ ] 手机号注册 (Phone)            │
+│ [ ] 微信登录 (WeChat)             │
 │ [ ] QQ登录 (QQ)                  │
 └──────────────────────────────────┘
 
@@ -268,9 +268,9 @@ Step 3: Personal Information
 │ 完善个人信息                      │
 │ Complete your profile            │
 │                                  │
-│ [真实姓名 / Real Name]           │
-│ [手机号码 / Phone Number]        │
-│ [所在城市 / City]                │
+│ [真实姓名 / Real Name]            │
+│ [手机号码 / Phone Number]         │
+│ [所在城市 / City]                 │
 │ [职业 / Occupation]              │
 │                                  │
 │ Why we ask: [Trust explanation]  │
@@ -334,19 +334,19 @@ Apologetic, context-providing:
 
 | Scenario | Message | Tone |
 |----------|---------|------|
-| New message | "You have 3 new messages" | Factual |
-| Invitation | "Sarah invited you to join her team" | Direct |
-| Task complete | "Export finished. Download now →" | Call-to-action |
-| Error | "Payment failed. Update card info" | Problem-solution |
+| New message | "You have 3 new messages." | Factual |
+| Invitation | "Sarah invited you to join her team." | Direct |
+| Task complete | "Export finished. Download now." | Call-to-action |
+| Error | "Payment failed. Update card info." | Problem-solution |
 
 **CN Market - Respectful & Relationship-Oriented:**
 
 | Scenario | Message | Tone |
 |----------|---------|------|
-| New message | "您的朋友发来了3条消息" (Your friends sent you 3 messages) | Respectful |
-| Invitation | "Sarah诚邀您加入团队" (Sarah respectfully invites you to join the team) | Formal |
-| Task complete | "导出已完成，感谢您的耐心等待" (Export complete, thank you for your patience) | Appreciative |
-| Error | "抱歉，支付遇到问题，请核对信息后重试" (Sorry, payment issue, please verify and retry) | Apologetic |
+| New message | "您的朋友发来了3条消息" (Your friends sent you 3 messages.) | Respectful |
+| Invitation | "Sarah诚邀您加入团队" (Sarah respectfully invites you to join the team.) | Formal |
+| Task complete | "导出已完成，感谢您的耐心等待" (Export complete, thank you for your patience.) | Appreciative |
+| Error | "抱歉，支付遇到问题，请核对信息后重试" (Sorry, payment issue, please verify and retry.) | Apologetic |
 
 ---
 
@@ -371,7 +371,7 @@ Toasts are small messages that appear temporarily to give users feedback about t
 |---------|---------|
 | **Container** | White background, 4px blue left border, drop shadow |
 | **Layout** | Horizontal (icon, text, and button in one row) |
-| **Icon types** | ✓ Green checkmark (success)<br>✗ Red X (error)<br>ℹ Blue info icon (info) |
+| **Icon types** | ✅ Green checkmark (success)<br>✗ Red X (error)<br>ℹ Blue info icon (info) |
 | **Message** | Bold, medium-sized, black text |
 | **Action button** | Optional, blue text, clickable |
 | **Position** | Top-right corner of screen |
@@ -381,14 +381,14 @@ Toasts are small messages that appear temporarily to give users feedback about t
 
 | Type | Icon | Message | Optional Action |
 |------|------|---------|----------------|
-| Success | ✓ Green | "File uploaded successfully" | "View" button |
-| Error | ✗ Red | "Payment failed" | "Retry" button |
+| Success | ✅ Green | "File uploaded successfully" | "View" button |
+| Error | ❌ Red | "Payment failed" | "Retry" button |
 | Info | ℹ Blue | "Changes saved automatically" | None |
 
 **Visual Example:**
 ```
 ┌──────────────────────────────────────────────┐
-│  ✓  File uploaded successfully     [View]    │
+│  ✅  File uploaded successfully     [View]   │
 └──────────────────────────────────────────────┘
 ```
 
@@ -412,7 +412,7 @@ Toasts are small messages that appear temporarily to give users feedback about t
 |---------|---------|
 | **Container** | Gradient background (light red to light orange), rounded corners, thin red border |
 | **Layout** | Vertical (message and context stacked) |
-| **Icon types** | ✓ Red checkmark (success)<br>⚠ Orange alert (error/warning) |
+| **Icon types** | Red checkmark (success)<br>Orange alert (error/warning) |
 | **Main message** | Bold, dark gray text |
 | **Context text** | Smaller, lighter gray text below main message |
 | **Action button** | Not typically included (less action-oriented) |
@@ -423,14 +423,14 @@ Toasts are small messages that appear temporarily to give users feedback about t
 
 | Type | Icon | Main Message | Context Message |
 |------|------|--------------|-----------------|
-| Success | ✓ Red | "文件上传成功" (File uploaded successfully) | "感谢您使用我们的服务" (Thank you for using our service) |
+| Success | ❌ Red | "文件上传成功" (File uploaded successfully) | "感谢您使用我们的服务" (Thank you for using our service) |
 | Error | ⚠ Orange | "抱歉，支付遇到问题" (Sorry, payment issue) | "请检查您的支付方式并重试" (Please check payment method and retry) |
 
 **Visual Example:**
 ```
 ┌────────────────────────────────────────┐
-│  ✓  文件上传成功                       │
-│     感谢您使用我们的服务                │
+│  ✅  文件上传成功                       │
+│     感谢您使用我们的服务                 │
 └────────────────────────────────────────┘
 ```
 
@@ -611,14 +611,11 @@ Phone Number
 
 ### Available Components
 
-| Component | US Variant | CN Variant | Documentation |
-|-----------|-----------|-----------|---------------|
-| TrustBadge | ✅ | ✅ | [View](#trust-components) |
-| Toast Notification | ✅ | ✅ | [View](#communication-patterns) |
-| OnboardingFlow | ✅ | ✅ | [View](#onboarding-flows) |
-| ReviewCard | ✅ | ✅ | Coming soon |
-| SocialShare | ✅ | ✅ | Coming soon |
-| AuthModal | ✅ | ✅ | Coming soon |
+| Component | US Variant | CN Variant |
+|-----------|-----------|-----------|
+| TrustBadge | ✅ | ✅ |
+| Toast Notification | ✅ | ✅ | 
+| OnboardingFlow | ✅ | ✅ | 
 
 ### How Developers Use These Components
 
@@ -642,7 +639,7 @@ The system automatically shows the correct version based on:
 - Cross Cultural Communication Essay (internal document)
 
 **Questions?**  
-Contact: design-systems-team@company.com
+Contact: ryamtari@gmail.com
 
 ---
 

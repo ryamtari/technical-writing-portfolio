@@ -4,7 +4,7 @@
 The REST countries API provides information about countries around the world. Access data including country names, populations, currencies, languages, flags, and more through simple HTTP requests.
 
 
-**Base URL:** https://restcountries.com/v3.1  
+**Base URL:** https://restcountries.com/
 **Version:** 3.1  
 **Authentication:** None required
 

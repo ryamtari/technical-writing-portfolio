@@ -36,13 +36,13 @@ This guide provides specifications and implementation patterns for building UI c
 
 ## Table of Contents
 
-1. [When to Use This Guide]
-2. [Trust & Credibility Components]
-3. [User Onboarding Flows]
-4. [Communication Patterns]
-5. [Form Design Specifications]
-6. [Testing & QA Checklist]
-7. [Component Library]
+1. **[When to Use This Guide]**
+2. **[Trust & Credibility Components]**
+3. **[User Onboarding Flows]**
+4. **[Communication Patterns]**
+5. **[Form Design Specifications]**
+6. **[Testing & QA Checklist]**
+7. **[Component Library]**
 
 ---
 

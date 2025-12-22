@@ -414,22 +414,22 @@ Best regards,
 **If buying (not building) AI hiring tools, ask vendors:**
 
 **About Their Data:**
-1. What data was your model trained on?
-2. What is the demographic breakdown? (Get specific percentages)
-3. How did you address historical bias?
-4. How often do you update training data?
+1. What data was your model trained on?  
+2. What is the demographic breakdown? (Get specific percentages)  
+3. How did you address historical bias?  
+4. How often do you update training data?  
 
 **About Fairness:**
-5. What fairness metrics do you use?
-6. What are your specific thresholds? (Get numbers, not vague statements)
-7. Can you show recent bias audit results?
-8. Have you been audited by independent third parties?
+5. What fairness metrics do you use?  
+6. What are your specific thresholds? (Get numbers, not vague statements)  
+7. Can you show recent bias audit results?  
+8. Have you been audited by independent third parties?  
 
 **About Transparency:**
-9. Can your system explain WHY it ranked candidates?
-10. What information do candidates receive?
-11. Can we customize which features the AI uses?
-12. Can we disable risky features?
+9. Can your system explain WHY it ranked candidates?  
+10. What information do candidates receive?  
+11. Can we customize which features the AI uses?  
+12. Can we disable risky features?  
 
 **Red Flags:**
 - Claims system is "completely unbiased" (impossible)

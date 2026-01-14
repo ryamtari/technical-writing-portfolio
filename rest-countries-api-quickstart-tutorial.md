@@ -139,13 +139,13 @@ If the country isn't found, this displays a friendly error message.
 ---
 
 ### Troubleshooting
-**Problem:** Nothing happens when I click Search.
+**Problem:** Nothing happens when I click Search.  
 **Solution:** Check the browser console (F12) for error messages. Make sure you're connected to the internet.
 
-**Problem:** I see "Country not found" for valid countries.
+**Problem:** I see "Country not found" for valid countries.  
 **Solution:** Try using the country's common English name or name variations (e.g. "Islamic Republic of Iran" instead of "Iran").
 
-**Problem:** The page looks broken.
+**Problem:** The page looks broken.  
 **Solution:** Make sure you copied all the code and correctly saved the file with a `.html` extension. Also ensure all the HTML tags are properly closed.
 
 ---

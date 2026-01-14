@@ -57,6 +57,8 @@ Step-by-step tutorial that guides beginners through building their first applica
 - Beginner-friendly explanations
 - Educational content design
 
+---
+
 ## 3. Localization Design System Guide
 **[View Full Guide](localization-design-system-guide.md)**
 
@@ -112,7 +114,7 @@ Quick reference guide covering 150+ localization rules for content formatting, c
 
 ---
 
-## [5]. Understanding Bias in AI Hiring Systems
+## 5. Understanding Bias in AI Hiring Systems
 **[View Full Documentation](./ai-bias-guide.md)**
 
 Non-technical guide explaining algorithmic bias in automated hiring systems, featuring real-world case studies (Amazon, HireVue), root cause analysis, and a practical implementation framework for building fairer AI recruitment tools.

@@ -173,7 +173,7 @@ Non-technical guide explaining algorithmic bias in automated hiring systems, fea
 
 ## 📧 Contact
 
-I'm actively seeking technical writing opportunities, particularly in developer documentation. Feel free to reach out!
+Feel free to reach out!
 
 **Email:** ryamtari@gmail.com  
 **LinkedIn:** https://www.linkedin.com/in/ryamtari/  
@@ -194,4 +194,4 @@ These principles guide all my technical writing work.
 
 ---
 
-*Last Updated: December 2025*
+*Last Updated: September 2026*
